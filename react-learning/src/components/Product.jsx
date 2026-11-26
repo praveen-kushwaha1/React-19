@@ -165,11 +165,15 @@ export const Product = ({ name, price, color, data = {} }) => {
       <h3>Color - {color}</h3>
 
       {/* Display properties from the data object */}
-      <h3>RAM - {data.ram}</h3>
+      {data.ram && (
+        <>
+          <h3>RAM - {data.ram}</h3>
 
-      <h3>ROM - {data.rom}</h3>
+          <h3>ROM - {data.rom}</h3>
 
-      <h3>Chip - {data.chip}</h3>
+          <h3>Chip - {data.chip}</h3>
+        </>
+      )}
     </div>
   );
 };

@@ -7,6 +7,8 @@ import Product from "./components/Product";
 // Importing Compo using DEFAULT EXPORT.
 import Compo from "./components/Compo";
 
+import Items from "./components/Items";
+
 // =========================================================
 // PR-003: REACT PROPS - PARENT COMPONENT
 // =========================================================
@@ -110,6 +112,7 @@ export const App = () => {
 
   return (
     <>
+      <Items />
       {/* Rendering another reusable component */}
       <Compo />
 
@@ -155,7 +158,7 @@ export const App = () => {
           This demonstrates component reusability.
       */}
 
-      <Product name="Laptop" price={9000000} color="black" />
+      {/* <Product name="Laptop" price={9000000} color="black" /> */}
     </>
   );
 };

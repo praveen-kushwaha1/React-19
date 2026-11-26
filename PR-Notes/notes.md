@@ -41,6 +41,8 @@ Playlist sequence identified
    PR-027 Advanced Task Flow App Advanced task management
    PR-028 Pixabay Clone Image search application
 
+   restrucure this code in better way also add commented notes for easier while revsion give me pr descripopn in deteal with imp queston
+
 This gives us 28 logical PRs in total. 3. Repository structure
 Repository name: react-practical-learning
 react-practical-learning/
