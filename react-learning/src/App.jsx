@@ -9,6 +9,8 @@ import Compo from "./components/Compo";
 
 import Items from "./components/Items";
 
+import { Events } from "./components/Events";
+
 // =========================================================
 // PR-003: REACT PROPS - PARENT COMPONENT
 // =========================================================
@@ -115,6 +117,7 @@ export const App = () => {
       <Items />
       {/* Rendering another reusable component */}
       <Compo />
+      <Events />
 
       {/* ================================================
           PRODUCT 1: IPHONE
