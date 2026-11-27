@@ -12,6 +12,7 @@ import Items from "./components/Items";
 import { Events } from "./components/Events";
 
 import UseState from "./components/UseState";
+import Mapfilter from "./components/Mapfilter";
 
 // =========================================================
 // PR-003: REACT PROPS - PARENT COMPONENT
@@ -121,6 +122,7 @@ export const App = () => {
       <Compo />
       <Events />
       <UseState />
+      <Mapfilter />
 
       {/* ================================================
           PRODUCT 1: IPHONE
