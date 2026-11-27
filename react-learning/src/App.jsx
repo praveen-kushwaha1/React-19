@@ -11,6 +11,8 @@ import Items from "./components/Items";
 
 import { Events } from "./components/Events";
 
+import UseState from "./components/UseState";
+
 // =========================================================
 // PR-003: REACT PROPS - PARENT COMPONENT
 // =========================================================
@@ -118,6 +120,7 @@ export const App = () => {
       {/* Rendering another reusable component */}
       <Compo />
       <Events />
+      <UseState />
 
       {/* ================================================
           PRODUCT 1: IPHONE
