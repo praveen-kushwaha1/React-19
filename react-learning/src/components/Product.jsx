@@ -1,4 +1,5 @@
 import React from "react";
+import "./Product.css";
 
 // =========================================================
 // PR-003: REACT PROPS
@@ -154,24 +155,57 @@ import React from "react";
 //
 // =========================================================
 
+// Reusable Product card component
+// Receives basic props (name, price, color) and an optional `data` object for extra specs
 export const Product = ({ name, price, color, data = {} }) => {
+  // --- STYLING APPROACH 1: Style object ("internal" JS object style) ---
+  // In React, CSS properties use camelCase (e.g., `backgroundColor` instead of `background-color`)
+  // Note: `border: "10px"` needs a style & color like "10px solid black" to render visibly
+  const myStyle = {
+    backgroundColor: "yellow",
+    border: "10px",
+  };
+
+  // --- STYLING APPROACH 2: Inline style object ---
+  // Passed directly to `style={...}` on the JSX element
+  const inlineStyle = {
+    backgroundColor: "blue",
+    padding: "10px",
+    margin: "10px",
+    border: "1px solid yellow",
+    borderRadius: "10px",
+  };
+
+  // --- SAFE PROPERTY ACCESS & DESTRUCTURING ---
+  // Optional chaining (`?.`) avoids runtime errors if `data` is undefined/null or lacks `name`
+  console.log(data?.name);
+
+  // Destructure `data` once so JSX stays shorter and easier to read
+  const { ram, rom, chip } = data;
+
   return (
-    <div>
-      {/* Display primitive props */}
+    // --- STYLING APPROACH 3: External CSS via `className` ---
+    // Active styling: uses external CSS class `.container`
+    // To test another style during revision, swap `className="container"` with:
+    //   style={myStyle}      -> for the `myStyle` object above
+    //   style={inlineStyle}  -> for the inline style object above
+    <div
+      //className="container"
+      className="product-container"
+      // style={myStyle}
+      // style={inlineStyle}
+    >
+      {/* Primitive / main product props */}
       <h1>Brand - {name}</h1>
-
       <h3>Price - {price}</h3>
-
       <h3>Color - {color}</h3>
 
-      {/* Display properties from the data object */}
-      {data.ram && (
+      {/* Conditional rendering: renders hardware specs only when `data.ram` is truthy */}
+      {ram && (
         <>
-          <h3>RAM - {data.ram}</h3>
-
-          <h3>ROM - {data.rom}</h3>
-
-          <h3>Chip - {data.chip}</h3>
+          <h3>RAM - {ram}</h3>
+          <h3>ROM - {rom}</h3>
+          <h3>Chip - {chip}</h3>
         </>
       )}
     </div>

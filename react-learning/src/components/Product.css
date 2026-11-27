@@ -1,0 +1,45 @@
+
+/*
+=========================================================
+PRODUCT COMPONENT CSS
+=========================================================
+*/
+
+/* Main product card */
+.product-container {
+    background-color: #f5f5f5;
+    border: 2px solid #333;
+    border-radius: 10px;
+
+    padding: 15px;
+    margin: 15px;
+
+    max-width: 350px;
+
+    font-family: Arial, sans-serif;
+}
+
+/* Product heading */
+.product-container h2 {
+    color: darkblue;
+}
+
+/* Product information */
+.product-container p {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+/* Product specifications section */
+.product-specifications {
+    background-color: #e0f2fe;
+    padding: 10px;
+
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Specifications heading */
+.product-specifications h3 {
+    color: darkgreen;
+}
